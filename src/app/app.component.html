@@ -2,30 +2,63 @@
 
 
 <div class="content" role="main">
-  <div class="container-fluid">
-    <div class="row">
+  <div class="container">
+    <div class="row mb-3">
       <div class="col">
-
+        <div class="d-flex justify-content-center">
+          <img src="../assets/banner.jpg" alt="">
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col">
-
+      <div class="col-6">
+        <div class="d-flex justify-content-center">
+          <img src="../assets/img1.jpg" alt="">
+        </div>
       </div>
-      <div class="col">
-
+      <div class="col-6">
+        <div class="d-flex justify-content-center">
+          <img src="../assets/img2.jpg" alt="">
+        </div>
       </div>
     </div>
+
+    <div class="row mt-5">
+      <div class="card">
+
+        <div class="card-header">
+          Infomacion de API
+        </div>
+
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <th>
+                ID
+              </th>
+              <th>
+                Titulo
+              </th>
+              <th>
+                Completado
+              </th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of emotionsArray">
+                <td>{{item.id}}</td>
+                <td>{{ item.title }}</td>
+                <td>{{item.completed}}</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+
   </div>
-
 </div>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
 
 <router-outlet></router-outlet>
